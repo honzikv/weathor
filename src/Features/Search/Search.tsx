@@ -33,16 +33,17 @@ const Search = () => {
             </Center>
 
             <InputGroup maxWidth="lg" sx={{ pr: 0 }}>
-                <InputLeftAddon sx={{ pr: 0 }}>
-                    <WiDayHaze size="80%" />
+                <InputLeftAddon>
+                    <WiDayHaze size="90%" />
                 </InputLeftAddon>
                 <Input placeholder="Search" variant="filled" />
                 <InputRightAddon>
-                    <IconButton  aria-label="Search">
+                    <IconButton variant="ghost" aria-label="Search">
                         <SearchIcon />
                     </IconButton>
                 </InputRightAddon>
             </InputGroup>
+            <Divider sx={{ mt: 4 }} />
         </VStack>
     )
 }
