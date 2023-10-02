@@ -1,15 +1,14 @@
-import { HStack, Heading } from '@chakra-ui/react'
+import { Center, HStack, Heading, Text, useColorModeValue } from '@chakra-ui/react'
 
 const Logo = () => {
+
+
     return (
-        <HStack spacing={0}>
-            <Heading fontWeight="thin" size="xl" sx={{ margin: 0, padding: 0 }}>
-                Weath
+        <Center>
+            <Heading fontWeight="bold" size="xl">
+                Weath<Text as="span" color={useColorModeValue('gray.500', 'gray.400')}>OR</Text>
             </Heading>
-            <Heading fontWeight="bold" size="xl" sx={{ margin: 0, padding: 0 }}>
-                OR
-            </Heading>
-        </HStack>
+        </Center>
     )
 }
 

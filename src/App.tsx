@@ -1,22 +1,34 @@
 import './App.css'
-import { ChakraProvider, VStack } from '@chakra-ui/react'
+import {
+    Box,
+    ChakraProvider,
+    Container,
+    Grid,
+    GridItem,
+    VStack,
+} from '@chakra-ui/react'
 import Toolbar from './Features/Toolbar/Toolbar'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import Error from './Features/Error/Error'
 import Home from './Features/Home/Home'
+import initTranslation from './translation/initTranslation'
+
+initTranslation()
 
 const App = () => {
     return (
         <ChakraProvider>
-            <VStack spacing={0}>
+            <Box>
                 <Toolbar />
-                <Router>
-                    <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="*" element={<Error />} />
-                    </Routes>
-                </Router>
-            </VStack>
+                <Box pt={4}>
+                    <Router>
+                        <Routes>
+                            <Route path="/" element={<Home />} />
+                            <Route path="*" element={<Error />} />
+                        </Routes>
+                    </Router>
+                </Box>
+            </Box>
         </ChakraProvider>
     )
 }

@@ -5,6 +5,7 @@ import {
     Divider,
     HStack,
     Heading,
+    Text,
     IconButton,
     Input,
     InputGroup,
@@ -12,26 +13,18 @@ import {
     InputRightAddon,
     VStack,
 } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next'
 
 import { WiDayHaze } from 'react-icons/wi'
 
 const Search = () => {
-    return (
-        <VStack>
-            <Box h="5vh" />
-            <Divider />
-            <Center>
-                <HStack>
-                    <Heading fontSize={24} fontWeight="thin" size="xl">
-                        Show
-                    </Heading>
-                    <Heading fontSize={24}>Weather</Heading>
-                    <Heading fontSize={24} fontWeight="thin" size="xl">
-                        in
-                    </Heading>
-                </HStack>
-            </Center>
 
+    const { t } = useTranslation('search')
+
+    return (
+        <VStack sx={{mt: 4}}>
+            
+            <Heading fontWeight="400" fontSize="3xl">Show weather in</Heading>
             <InputGroup maxWidth="lg" sx={{ pr: 0 }}>
                 <InputLeftAddon>
                     <WiDayHaze size="90%" />
@@ -43,7 +36,6 @@ const Search = () => {
                     </IconButton>
                 </InputRightAddon>
             </InputGroup>
-            <Divider sx={{ mt: 4 }} />
         </VStack>
     )
 }
