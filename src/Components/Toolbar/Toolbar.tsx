@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react'
 import Logo from './Logo'
 import ThemeSwitcher from '../Theme/ThemeSwitcher'
+import DebugMenu from '../DebugMenu/DebugMenu'
 
 const Toolbar = () => {
     return (
@@ -26,6 +27,7 @@ const Toolbar = () => {
                     </HStack>
                 </GridItem>
             </Grid>
+            <DebugMenu />
         </Box>
     )
 }

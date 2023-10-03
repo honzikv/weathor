@@ -1,10 +1,7 @@
 const en = {
-    components: {
-
-    },
-    pages: {
-
-    },
+    search: {
+        searchTitle: "Show weather in",
+    }
 }
 
 export default en

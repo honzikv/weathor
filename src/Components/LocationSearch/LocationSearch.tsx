@@ -17,14 +17,14 @@ import { useTranslation } from 'react-i18next'
 
 import { WiDayHaze } from 'react-icons/wi'
 
-const Search = () => {
-
+const LocationSearch = () => {
     const { t } = useTranslation('search')
 
     return (
-        <VStack sx={{mt: 4}}>
-            
-            <Heading fontWeight="400" fontSize="3xl">Show weather in</Heading>
+        <VStack sx={{ mt: 4 }}>
+            <Heading fontWeight="400" fontSize="3xl">
+                {t('searchTitle')}
+            </Heading>
             <InputGroup maxWidth="lg" sx={{ pr: 0 }}>
                 <InputLeftAddon>
                     <WiDayHaze size="90%" />
@@ -40,4 +40,4 @@ const Search = () => {
     )
 }
 
-export default Search
+export default LocationSearch

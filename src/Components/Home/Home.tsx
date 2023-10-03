@@ -1,6 +1,6 @@
 import { useAtom } from 'jotai'
-import Search from '../Search/Search'
-import { currentLocationAtom, locationsAtom } from '../Search/locationAtoms'
+import LocationSearch from '../LocationSearch/LocationSearch'
+import { currentLocationAtom, locationsAtom } from '../LocationSearch/locationAtoms'
 import { useEffect, useState } from 'react'
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
         <> {
-            showSearch ? <Search /> : null
+            showSearch ? <LocationSearch /> : null
         }
         </>
     )

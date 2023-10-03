@@ -7,10 +7,10 @@ import {
     GridItem,
     VStack,
 } from '@chakra-ui/react'
-import Toolbar from './Features/Toolbar/Toolbar'
+import Toolbar from './Components/Toolbar/Toolbar'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-import Error from './Features/Error/Error'
-import Home from './Features/Home/Home'
+import Error from './Components/Error/Error'
+import Home from './Components/Home/Home'
 import initTranslation from './translation/initTranslation'
 
 initTranslation()
